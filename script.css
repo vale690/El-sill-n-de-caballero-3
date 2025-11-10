@@ -1,0 +1,12 @@
+document.getElementById('year-bar').textContent = new Date().getFullYear();
+// Form reserva
+const form = document.getElementById('bookForm');
+form.addEventListener('submit', e=>{
+  e.preventDefault();
+  const cliente = document.getElementById('cliente').value;
+  const fecha = document.getElementById('fecha').value;
+  if(!cliente || !fecha) return alert('Completa los datos');
+  const dateStr = new Date(fecha).toLocaleString();
+  alert('Reserva confirmada para ' + cliente + ' el ' + dateStr);
+  form.reset();
+});
