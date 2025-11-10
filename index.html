@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>El Sillón del Caballero</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=PT+Serif:400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar-top">
+    <div class="logo-wrap">
+      <!-- Logo minimal: barba + tijeras con ligera animación -->
+      <svg id="logo-barber" viewBox="0 0 200 80" width="160" aria-label="El Sillón del Caballero">
+        <g transform="translate(0,0)">
+          <path id="beard" d="M20,40 C40,10 80,10 100,40 C120,10 160,10 180,40" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+          <g transform="translate(110,10)">
+            <path d="M10,10 L30,30 M30,10 L10,30" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <text x="0" y="74" font-family="PT Serif, serif" font-size="16" fill="#111">El Sillón del Caballero</text>
+        </g>
+      </svg>
+    </div>
+    <div class="cta">
+      <a href="#reserva" class="res">Reservar</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="showcase">
+      <h1>Estilo clásico, trato premium</h1>
+      <p class="lead">Servicio profesional y ambiente elegante — siéntete como en casa.</p>
+    </section>
+
+    <section class="gallery">
+      <!-- Fondo elegante: barber_bg.jpg (fondo via CSS) -->
+      <div class="photo-wrap">
+        <img src="barber_main.jpg" alt="Corte masculino" class="photo">
+      </div>
+    </section>
+
+    <section id="reserva" class="book">
+      <h2>Reserva tu turno</h2>
+      <form id="bookForm">
+        <input type="text" id="cliente" placeholder="Nombre" required>
+        <input type="datetime-local" id="fecha" required>
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© <span id="year-bar"></span> El Sillón del Caballero — Valeris Causil</footer>
+  <script src="script.js"></script>
+</body>
+</html>
